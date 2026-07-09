@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Rozilik - Problem Finder{% endblock %}
+
+{% block content %}
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card consent-card fade-in">
+        <div class="card-body text-center p-5">
+            <h1 class="display-5 mb-4">Assalomu alaykum! 👋</h1>
+            <p class="lead mb-4">
+                Biz odamlarning kundalik hayotida uchraydigan muammolarni o'rganish maqsadida qisqa anonim so'rovnoma tayyorladik.
+            </p>
+            <p class="mb-4">
+                🕒 So'rovnomani to'ldirish taxminan <strong>5–10 daqiqa</strong> vaqt oladi.
+            </p>
+            <p class="mb-4">
+                Sizning javoblaringiz kelajakda odamlar hayotini osonlashtiradigan foydali loyiha yoki xizmat yaratishda muhim ahamiyatga ega bo'ladi.
+            </p>
+            <hr class="my-4">
+            <p class="fw-bold mb-4">So'rovnomada ishtirok etishga rozimisiz?</p>
+            <div class="d-flex justify-content-center gap-3">
+                <form action="{% url 'start_survey' %}" method="POST" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success btn-lg px-5" id="btn-yes">
+                        ✅ Ha, roziman
+                    </button>
+                </form>
+                <button type="button" class="btn btn-danger btn-lg px-5" id="btn-no">
+                    ❌ Yo'q
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const noBtn = document.getElementById('btn-no');
+    let noClicks = 0;
+    const maxNoMoves = 3;
+
+    if (noBtn) {
+        noBtn.addEventListener('mouseenter', function(e) {
+            if (noClicks < maxNoMoves) {
+                const container = this.parentElement;
+                const maxX = container.offsetWidth - this.offsetWidth - 20;
+                const maxY = container.offsetHeight - this.offsetHeight - 20;
+                const x = Math.random() * Math.max(maxX, 50);
+                const y = Math.random() * Math.max(maxY, 50);
+                this.style.transform = `translate(${x}px, ${y}px)`;
+                this.style.transition = 'transform 0.2s ease';
+                noClicks++;
+            }
+        });
+
+        noBtn.addEventListener('click', function(e) {
+            if (noClicks >= maxNoMoves) {
+                window.location.href = '/';
+            }
+        });
+    }
+</script>
+{% endblock %}

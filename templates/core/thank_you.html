@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Rahmat - Problem Finder{% endblock %}
+
+{% block content %}
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card text-center fade-in">
+        <div class="card-body p-5">
+            {% if already_submitted %}
+            <div class="mb-4" style="font-size: 4rem;">⏰</div>
+            <h1 class="mb-3">Siz allaqachon so'rovnoma to'ldirgansiz!</h1>
+            <p class="lead mb-4">24 soat ichida faqat bir marta so'rovnomada qatnashish mumkin.</p>
+            {% else %}
+            <div class="mb-4" style="font-size: 4rem;">🎉</div>
+            <h1 class="mb-3">Rahmat!</h1>
+            <p class="lead mb-4">Sizning javoblaringiz muvaffaqiyatli qabul qilindi.</p>
+            <p class="text-muted">Sizning fikringiz kelajakda odamlar hayotini osonlashtiradigan loyihalar yaratishda muhim ahamiyatga ega bo'ladi.</p>
+            {% endif %}
+            <a href="{% url 'consent' %}" class="btn btn-primary btn-lg mt-3">Bosh sahifaga qaytish</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

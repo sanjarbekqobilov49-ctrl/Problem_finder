@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.consent-card, .survey-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    max-width: 700px;
+    width: 100%;
+}
+
+.progress {
+    border-radius: 10px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.progress-bar {
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-left {
+    animation: slideLeft 0.4s ease-in;
+}
+
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-right {
+    animation: slideRight 0.4s ease-in;
+}
+
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.form-check {
+    padding-left: 2em;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.rating-group .form-check {
+    padding: 10px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.rating-group .form-check:hover {
+    background-color: #f8f9fa;
+    border-color: #0d6efd;
+}
+
+.rating-group .form-check-input:checked + .form-check-label {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.checkbox-group .form-check {
+    padding: 8px 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.checkbox-group .form-check:hover {
+    background-color: #f0f7ff;
+    border-color: #0d6efd;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.btn-lg {
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .consent-card, .survey-card {
+        margin: 10px;
+    }
+    .card-body {
+        padding: 1.5rem !important;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    .display-5 {
+        font-size: 1.5rem;
+    }
+}

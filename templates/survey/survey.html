@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Savol {{ step }} / {{ total }} - Problem Finder{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold">Savol {{ step }} / {{ total }}</span>
+                    <span class="fw-bold">{{ progress }}%</span>
+                </div>
+                <div class="progress" style="height: 12px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+                         role="progressbar" 
+                         style="width: {{ progress }}%;" 
+                         aria-valuenow="{{ progress }}" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <div class="card survey-card fade-in slide-{{ direction|default:'left' }}">
+                <div class="card-body p-4 p-md-5">
+                    <h3 class="card-title mb-4">{{ question.title }}</h3>
+                    {% if question.text %}
+                    <p class="text-muted mb-4">{{ question.text }}</p>
+                    {% endif %}
+
+                    <form method="POST" id="surveyForm">
+                        {% csrf_token %}
+                        
+                        {% for field in form %}
+                        <div class="mb-3">
+                            {% if field.widget_type == 'checkboxselectmultiple' %}
+                            <div class="checkbox-group">
+                                {% for choice in field %}
+                                <div class="form-check mb-2">
+                                    {{ choice.tag }}
+                                    <label class="form-check-label fw-normal" for="{{ choice.id_for_label }}">
+                                        {{ choice.choice_label }}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% elif field.widget_type == 'radioselect' %}
+                            <div class="rating-group">
+                                {% for choice in field %}
+                                <div class="form-check mb-2">
+                                    {{ choice.tag }}
+                                    <label class="form-check-label fw-normal" for="{{ choice.id_for_label }}">
+                                        {{ choice.choice_label }}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ field }}
+                            {% endif %}
+                            {% if field.errors %}
+                            <div class="text-danger small mt-1">
+                                {{ field.errors.0 }}
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+
+                        <div class="d-flex justify-content-between mt-4">
+                            {% if can_go_back %}
+                            <a href="{% url 'survey' %}?back=1" class="btn btn-outline-secondary btn-lg" id="btn-back">
+                                ← Orqaga
+                            </a>
+                            {% else %}
+                            <div></div>
+                            {% endif %}
+
+                            {% if step == total %}
+                            <button type="submit" class="btn btn-success btn-lg" id="btn-next">
+                                ✅ Yakunlash
+                            </button>
+                            {% else %}
+                            <button type="submit" class="btn btn-primary btn-lg" id="btn-next">
+                                Keyingi →
+                            </button>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

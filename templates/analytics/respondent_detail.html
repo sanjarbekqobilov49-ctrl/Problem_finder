@@ -1,0 +1,67 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="mb-3">
+        <a href=".." class="btn btn-outline-secondary">&larr; Orqaga</a>
+    </div>
+
+    <h1>Respondent #{{ respondent.id }}</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Umumiy ma'lumot</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th style="width: 200px;">ID</th>
+                    <td>{{ respondent.id }}</td>
+                </tr>
+                <tr>
+                    <th>Ism</th>
+                    <td>{{ respondent.name|default:'-' }}</td>
+                </tr>
+                <tr>
+                    <th>Yosh</th>
+                    <td>{{ respondent.age }}</td>
+                </tr>
+                <tr>
+                    <th>Viloyat</th>
+                    <td>{{ respondent.region }}</td>
+                </tr>
+                <tr>
+                    <th>IP manzil</th>
+                    <td>{{ respondent.ip_address }}</td>
+                </tr>
+                <tr>
+                    <th>Qurilma</th>
+                    <td style="word-break: break-all;">{{ respondent.user_agent|default:'-' }}</td>
+                </tr>
+                <tr>
+                    <th>Javob yuborilgan sana</th>
+                    <td>{{ respondent.created_at|date:'d.m.Y H:i' }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">So'rovnoma javoblari</h5>
+        </div>
+        <div class="card-body">
+            {% for answer in answers %}
+            <div class="mb-4 p-3 border rounded">
+                <h6 class="fw-bold">{{ answer.question_number }}-savol</h6>
+                <p class="text-muted">{{ answer.question_title|default:'' }}</p>
+                <p>{{ answer.answer }}</p>
+                <small class="text-muted">{{ answer.created_at|date:'d.m.Y H:i' }}</small>
+            </div>
+            {% empty %}
+            <p class="text-muted">Javoblar mavjud emas.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
