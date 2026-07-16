@@ -10,6 +10,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
+ALLOWED_HOSTS = ("problem-finder.uz", "www.problem-finder.uz")
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
 INSTALLED_APPS = [
