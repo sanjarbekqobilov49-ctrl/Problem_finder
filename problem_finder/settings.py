@@ -96,3 +96,10 @@ SESSION_COOKIE_AGE = 86400
 
 IP_LIMIT_ENABLED = True
 IP_COOLDOWN_HOURS = 24
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://problem-finder.uz",
+    "https://www.problem-finder.uz",
+]
