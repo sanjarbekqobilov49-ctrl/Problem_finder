@@ -1,10 +1,10 @@
 services:
   web:
     build: .
-    environment:
-    SECRET_KEY: django-insecure-test-key
-    DEBUG: "False"
     container_name: django_web
+    environment:
+      SECRET_KEY: django-insecure-test-key
+      DEBUG: "False"
     ports:
       - "8000:8000"
     volumes:
