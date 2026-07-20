@@ -43,10 +43,10 @@ QUESTIONS = [
         'type': 'checkbox',
         'required': True,
         'options': [
-            'Ish topish', 'Usta topish', 'Doktor qabuliga yozilish',
-            'Navbat kutish', 'Internet sifati', 'Transport',
-            'Ta\'lim', 'Davlat xizmatlari', 'Onlayn to\'lovlar',
-            'Hujjat ishlari', 'Boshqa',
+            '💼 Ish topish', '🔧 Usta topish', '👨‍⚕️ Doktor qabuliga yozilish',
+            '⏰ Navbat kutish', '🌐 Internet sifati', '🚗 Transport',
+            '📚 Ta\'lim', '🏛️ Davlat xizmatlari', '💳 Onlayn to\'lovlar',
+            '📄 Hujjat ishlari', '💭 Boshqa',
         ],
         'has_other': True,
     },
@@ -56,7 +56,7 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['Ish', 'O\'qish', 'Transport', 'Navbat kutish', 'Telefon', 'Uy ishlari', 'Boshqa'],
+        'options': ['💼 Ish', '📚 O\'qish', '🚗 Transport', '⏰ Navbat kutish', '📱 Telefon', '🏠 Uy ishlari', '💭 Boshqa'],
         'has_other': True,
     },
     {
