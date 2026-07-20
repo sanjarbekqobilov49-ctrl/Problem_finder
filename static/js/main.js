@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initOtherCheckboxes() {
     const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
     checkboxes.forEach(function(cb) {
-        if (cb.value === 'Boshqa') {
+        if (cb.value === '💭 Boshqa') {
             cb.addEventListener('change', function() {
                 const parentDiv = this.closest('.form-check');
                 if (!parentDiv) return;
@@ -26,7 +26,7 @@ function initOtherCheckboxes() {
                     otherInput.type = 'text';
                     otherInput.className = 'form-control mt-2 other-input';
                     otherInput.name = this.name + '_other';
-                    otherInput.placeholder = 'Boshqa (yozing)';
+                    otherInput.placeholder = '💭 Boshqa (yozing)';
                     otherInput.maxLength = 200;
                     parentDiv.after(otherInput);
                 }

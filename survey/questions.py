@@ -132,14 +132,11 @@ QUESTIONS = [
     {
         'number': 15,
         'title': 'Agar sizga kerak bo\'lgan shunday xizmat yaratilsa, undan foydalanarmidingiz??',
+        'text': 'Variantlar:',
         'type': 'select',
         'required': True,
         'options': [
-            {'label': '🔥 Ha, har kuni'},
-            {'label': '👍 Ha, tez-tez'},
-            {'label': '🙂 Ba\'zida'},
-            {'label': '🤔 Faqat kerak bo\'lganda'},
-            {'label': '❌ Yo\'q'},
+            '🔥 Ha, har kuni', '👍 Ha, tez-tez', '🙂 Ba\'zida', '🤔 Faqat kerak bo\'lganda', '❌ Yo\'q',
         ],
     },
 ]
