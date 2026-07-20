@@ -65,7 +65,7 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['🛒 Mahsulot yoki oziq-ovqat buyurtma qilish', '🏥 Shifokorga navbat olish', '💇 Sartarosh yoki go\'zallik saloniga yozilish', '🔧 Usta topish', '🚕 Taksi yoki transport topish', '🏠 Uy yoki kvartira topish', '💼 Ish topish', '📚 Kurs yoki repetitor topish', '🛍️ Chegirmalarni topish', '🍽️ Restoran/kafe topish va buyurtma qilish', '📦 Kuryer yoki yetkazib berish xizmatlari', '🏛️ Davlat xizmatlaridan foydalanish', '💳 To\'lovlarni amalga oshirish', '📄 Hujjatlarni rasmiylashtirish', '🏪 Yaqin atrofdagi do\'kon va xizmatlarni topish', '🔍 Boshqa'],
+        'options': ['🛒 Mahsulot yoki oziq-ovqat buyurtma qilish', '🏥 Shifokorga navbat olish', '💇 Sartarosh yoki go\'zallik saloniga yozilish', '🔧 Usta topish', '🚕 Taksi yoki transport topish', '🏠 Uy yoki kvartira topish', '💼 Ish topish', '📚 Kurs yoki repetitor topish', '🛍️ Chegirmalarni topish', '🍽️ Restoran/kafe topish va buyurtma qilish', '📦 Kuryer yoki yetkazib berish xizmatlari', '🏛️ Davlat xizmatlaridan foydalanish', '💳 To\'lovlarni amalga oshirish', '📄 Hujjatlarni rasmiylashtirish', '🏪 Yaqin atrofdagi do\'kon va xizmatlarni topish', '💭 Boshqa'],
         'has_other': True,
     },
     {
@@ -74,7 +74,7 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['📍 Hududdagi barcha xizmatlar bitta joyda', '🛒 Mahalliy do\'konlar va mahsulotlar katalogi', '🏷️ Chegirmalar va aksiyalar haqida xabar berish', '🔧 Ishonchli ustalar katalogi', '👨‍⚕️ Shifokorlar va klinikalar katalogi', '💼 Mahalliy ish o\'rinlari', '🏠 Uy-joy ijarasi yoki sotib olish', '🚗 Mashina sotish va olish', '📦 Mahalliy yetkazib berish xizmati', '🏫 O\'quv markazlari va repetitorlar', '🍔 Kafelar va restoranlar', '🛍️ Mahalliy xizmatlar va do\'konlar', '📰 Hudud yangiliklari va e\'lonlari', '🤝 Ishonchli xizmat ko\'rsatuvchilarni topish', '❌ Menimcha, bunday xizmat kerak emas', '💡 Boshqa'],
+        'options': ['📍 Hududdagi barcha xizmatlar bitta joyda', '🛒 Mahalliy do\'konlar va mahsulotlar katalogi', '🏷️ Chegirmalar va aksiyalar haqida xabar berish', '🔧 Ishonchli ustalar katalogi', '👨‍⚕️ Shifokorlar va klinikalar katalogi', '💼 Mahalliy ish o\'rinlari', '🏠 Uy-joy ijarasi yoki sotib olish', '🚗 Mashina sotish va olish', '📦 Mahalliy yetkazib berish xizmati', '🏫 O\'quv markazlari va repetitorlar', '🍔 Kafelar va restoranlar', '🛍️ Mahalliy xizmatlar va do\'konlar', '📰 Hudud yangiliklari va e\'lonlari', '🤝 Ishonchli xizmat ko\'rsatuvchilarni topish', '❌ Menimcha, bunday xizmat kerak emas', '💭 Boshqa'],
         'has_other': True,
     },
     {
@@ -83,7 +83,7 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['🔍 Google yoki Yandex\'dan qidiraman', '📱 Telegram guruhlaridan qidiraman', '📸 Instagram\'dan qidiraman', '👥 Tanishlarimdan so\'rayman', '🗺️ Yandex Maps yoki Google Maps\'dan foydalanaman', '🏃 O\'zim borib qidiraman', '📞 Telefon qilib so\'rayman', '❌ Odatda topa olmayman', '📝 Boshqa'],
+        'options': ['🔍 Google yoki Yandex\'dan qidiraman', '📱 Telegram guruhlaridan qidiraman', '📸 Instagram\'dan qidiraman', '👥 Tanishlarimdan so\'rayman', '🗺️ Yandex Maps yoki Google Maps\'dan foydalanaman', '🏃 O\'zim borib qidiraman', '📞 Telefon qilib so\'rayman', '❌ Odatda topa olmayman', '💭 Boshqa'],
         'has_other': True,
     },
     {
@@ -108,7 +108,7 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['⚡ Foydalanish juda oson bo\'lishi', '🆓 Bepul bo\'lishi', '📍 Menga yaqin xizmatlarni ko\'rsatishi', '💰 Arzon narxlar yoki chegirmalar bo\'lishi', '⏱️ Vaqtimni tejashi', '🔒 Ishonchli bo\'lishi', '📞 Telefon qilishga hojat qoldirmasligi', '🚚 Yetkazib berish imkoniyati', '🔔 Kerakli xabarlarni yuborishi', '💳 Onlayn to\'lov qilish imkoniyati', '⭐ Reyting va sharhlar bo\'lishi', '🤖 Telegram orqali ishlashi', '📝 Boshqa'],
+        'options': ['⚡ Foydalanish juda oson bo\'lishi', '🆓 Bepul bo\'lishi', '📍 Menga yaqin xizmatlarni ko\'rsatishi', '💰 Arzon narxlar yoki chegirmalar bo\'lishi', '⏱️ Vaqtimni tejashi', '🔒 Ishonchli bo\'lishi', '📞 Telefon qilishga hojat qoldirmasligi', '🚚 Yetkazib berish imkoniyati', '🔔 Kerakli xabarlarni yuborishi', '💳 Onlayn to\'lov qilish imkoniyati', '⭐ Reyting va sharhlar bo\'lishi', '🤖 Telegram orqali ishlashi', '💭 Boshqa'],
         'has_other': True,
     },
     {
@@ -117,7 +117,7 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['📅 Navbatga avtomatik yozilish', '🔔 Chegirmalar haqida xabar olish', '💼 Yangi ishlar haqida xabar olish', '🏷️ Mahsulot narxi tushganda xabar olish', '🏥 Shifokor qabuliga yozilish', '🔧 Usta topish', '📦 Buyurtmani kuzatish', '💳 To\'lovlarni amalga oshirish', '📍 Yaqin xizmatlarni topish', '🏠 Uy narxlari va ijaralarni kuzatish','📚 Kurslar haqida xabar olish', '🤖 Telegram bot orqali avtomatik xizmatlardan foydalanish', '📝 Boshqa'],
+        'options': ['📅 Navbatga avtomatik yozilish', '🔔 Chegirmalar haqida xabar olish', '💼 Yangi ishlar haqida xabar olish', '🏷️ Mahsulot narxi tushganda xabar olish', '🏥 Shifokor qabuliga yozilish', '🔧 Usta topish', '📦 Buyurtmani kuzatish', '💳 To\'lovlarni amalga oshirish', '📍 Yaqin xizmatlarni topish', '🏠 Uy narxlari va ijaralarni kuzatish','📚 Kurslar haqida xabar olish', '🤖 Telegram bot orqali avtomatik xizmatlardan foydalanish', '💭 Boshqa'],
         'has_other': True,
     },
     {
@@ -126,13 +126,13 @@ QUESTIONS = [
         'text': 'Bir nechta javobni tanlash mumkin',
         'type': 'checkbox',
         'required': True,
-        'options': ['🏷️ Mening hududimdagi chegirmalarni ko\'rsatadigan xizmat', '🔧 Ishonchli usta topish xizmati', '💼 Ish topish platformasi', '🏥 Shifokor va klinika topish xizmati', '🛒 Mahsulotlarni solishtirish xizmati', '🏠 Uy-joy topish xizmati', '🚗 Mashina topish/sotish xizmati', '📚 Kurs va repetitor topish xizmati', '📦 Yetkazib berish xizmati', '🍽️ Kafe va restoranlarni topish xizmati', '📍 Mahalliy xizmatlar katalogi', '📰 Hududdagi e\'lonlar platformasi', '🤖 Hamma xizmatlar bitta Telegram botda', '🌐 Hamma xizmatlar bitta saytda', '💡 Boshqa'],
+        'options': ['🏷️ Mening hududimdagi chegirmalarni ko\'rsatadigan xizmat', '🔧 Ishonchli usta topish xizmati', '💼 Ish topish platformasi', '🏥 Shifokor va klinika topish xizmati', '🛒 Mahsulotlarni solishtirish xizmati', '🏠 Uy-joy topish xizmati', '🚗 Mashina topish/sotish xizmati', '📚 Kurs va repetitor topish xizmati', '📦 Yetkazib berish xizmati', '🍽️ Kafe va restoranlarni topish xizmati', '📍 Mahalliy xizmatlar katalogi', '📰 Hududdagi e\'lonlar platformasi', '🤖 Hamma xizmatlar bitta Telegram botda', '🌐 Hamma xizmatlar bitta saytda', '💭 Boshqa'],
         'has_other': True,
     },
     {
         'number': 15,
         'title': 'Agar sizga kerak bo\'lgan shunday xizmat yaratilsa, undan foydalanarmidingiz??',
-        'type': 'Variantlar:',
+        'type': 'select',
         'required': True,
         'options': [
             {'label': '🔥 Ha, har kuni'},

@@ -87,8 +87,8 @@ def save_answer_to_session(request, form, question):
         other_val = ''
         if question.get('has_other'):
             other_val = request.POST.get(f'{field_name}_other', '').strip()
-            if other_val and 'Boshqa' in selected:
-                selected = [x if x != 'Boshqa' else other_val for x in selected]
+            if other_val and '💭 Boshqa' in selected:
+                selected = [x if x != '💭 Boshqa' else other_val for x in selected]
         answers[field_name] = selected
         if question.get('has_other'):
             answers[f'{field_name}_other'] = other_val
